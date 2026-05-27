@@ -1,28 +1,5 @@
-# Revised Bio-Behavioral Team Dynamics Interpretation Prototype
-
-This revision aligns the Streamlit prototype with the dissertation RQ2 requirements and the supplied UI mockup.
-
-## What changed
-
-- Reorganized the main experience into a proposal-aligned three-panel customized AI-bot condition:
-  - left: de-identified run selection, teamwork translation, interpretation confidence
-  - center: mission storyboard, event marker, adaptation/interdependency/influence visualizations, metric tables
-  - right: AI interpretation assistant with suggested prompts and follow-up chat
-- Added a standard statistical-report condition with the same synthetic outputs in a conventional report format.
-- Added four synthetic de-identified runs and an optional ranking-task scaffold for RQ2 interpretation-accuracy testing.
-- Enriched the explanation packet with scenario context, metric definitions, and proposal-alignment metadata.
-- Updated the identity file so the bot answers in a cautious, non-expert, event-linked style and does not reveal hidden ranking labels during normal chat.
-- Fixed identity-file discovery so the app can use either `team_dynamics_chatbot_identity.md` in the project root or `docs/team_dynamics_chatbot_identity.md`.
-
-## Run locally
-
-```bash
-pip install -r requirements.txt
-streamlit run streamlit_app.py
-```
-
-Optional Gemini support uses a server-side `GEMINI_API_KEY` or `GOOGLE_API_KEY` from Streamlit secrets or environment variables. The app still works without Gemini by showing a local Python-computed interpretation scaffold.
-
-## Data note
-
-The included data generation remains synthetic demonstration data only. It does not use BioTDMS data, evaluate real trainees, or test dissertation hypotheses.
+streamlit>=1.39
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+google-genai>=1.0
